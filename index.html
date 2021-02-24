@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO list</title>
+    <link rel='stylesheet' href='font-awesome-4.7.0/css/font-awesome.css'>
+    <link rel='stylesheet' href='style/todo.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1 class="tittle">TO-DO List</h1>
+    </header>
+    <main>
+        <div class="container">
+
+            <div class="header">
+                <div class="clear">
+                    <i class="fa fa-refresh"></i>
+                </div>
+                <div id='date'>
+
+                </div>
+            </div>
+
+            <div class="content">
+                <ul id="list">
+                
+                </ul>
+                <script src='node_modules/handlebars/dist/handlebars.min.js' type ='handlebars/txt' id='handle'>
+                        {{#toDoList.LIST}}
+                        <li class='item'>
+                        <i class="fa {{DONE}} complete" job='complete' id='{{LIST.id}}'></i>
+                        <p class="text {{LINE}}">{{name}}</p>
+                        <i class="fa fa-trash tr" job='delete' id='{{LIST.id}}'></i>  
+                        </li> 
+                        {{/toDoList.LIST}}
+                </script>
+            </div>
+            <div class="add-to-do">
+                <a href="javascript:;" id='btn'><i class="fa fa-plus-circle add-item"></i></a> 
+                <input type="text" placeholder="Add a to-do" id='input'>
+              </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src='node_modules/handlebars/dist/handlebars.min.js'></script>
+    <script src='assets/ToDoServices.js'></script>
+    <script src='assets/toDocontroller.js'></script>
+</body>
+
+</html>
