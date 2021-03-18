@@ -27,12 +27,14 @@
 
                 </div>
             </div>
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+                integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+                crossorigin="anonymous"></script>
             <div class="content">
                 <ul id="list">
-                
+
                 </ul>
-                <script src='node_modules/handlebars/dist/handlebars.min.js' type ='handlebars/txt' id='handle'>
+                <script src='node_modules/handlebars/dist/handlebars.min.js' type='handlebars/txt' id='handle'>
                         {{#toDoList.LIST}}
                         <li class='item'>
                         <i class="fa {{DONE}} complete" job='complete' id='{{LIST.id}}'></i>
@@ -43,9 +45,9 @@
                 </script>
             </div>
             <div class="add-to-do">
-                <a href="javascript:;" id='btn'><i class="fa fa-plus-circle add-item"></i></a> 
+                <a href="javascript:;" id='btn'><i class="fa fa-plus-circle add-item"></i></a>
                 <input type="text" placeholder="Add a to-do" id='input'>
-              </div>
+            </div>
         </div>
     </main>
     <footer></footer>
